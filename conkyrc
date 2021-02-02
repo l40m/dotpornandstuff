@@ -1,0 +1,3 @@
+conky.text = [[
+    ${exec xprop -root _NET_CURRENT_DESKTOP | awk '{print $3}'}/${exec xprop -root _NET_NUMBER_OF_DESKTOPS | awk '{print $3}'} | CPU ${cpu}% | MEM $memperc% | BATT ${battery_percent BAT0}% | DATE ${time %a %d/%m/%Y %H:%M} | NOW PLAYING ${exec mpd-tmux.sh} | ${exec volume.sh} | MAIL ${exec find $HOME/mail/uabc/'[Gmail]'/Todos/new -type f | wc -l}
+]]
